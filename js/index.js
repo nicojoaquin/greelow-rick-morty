@@ -45,13 +45,11 @@ const handleSearch = (e) => {
     
     const filteredCharacters = characters.filter(character => character.name.toLowerCase().includes(finder.value.trim().toLowerCase()));
     
-    if(finder.value === '') {
-        return;
-    } else if(filteredCharacters.length === 0) {
+    if(filteredCharacters.length === 0) {
         return card.innerHTML = '<h3 class="text-center text-danger" >No existe un personaje con ese nombre</h3>'
     }
     
-    card.innerHTML = ''
+    card.innerHTML = '';
     showCharacters(filteredCharacters);
     
 };
